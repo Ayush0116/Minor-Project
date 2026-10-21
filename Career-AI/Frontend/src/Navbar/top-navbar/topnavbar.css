@@ -1,0 +1,70 @@
+/* ================= TOP NAVBAR ================= */
+.top-nav {
+    width: calc(100% - 250px);
+    height: 60px;
+   
+
+    position: fixed;
+    top: 0;
+    left: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 0 20px;
+
+    
+    z-index: 100;
+}
+
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* ================= ICONS ================= */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Bell & Settings Icons */
+.nav-icons svg {
+    width: 42px;
+    height: 42px;
+    padding: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #555;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-icons svg:hover {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(99, 102, 241, 0.25);
+}
+
+/* Last Profile Icon */
+.nav-icons svg:last-child {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    padding: 11px;
+    border-radius: 50%;
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.3);
+}
+
+/* Profile Hover */
+.nav-icons svg:last-child:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 22px rgba(99, 102, 241, 0.4);
+}

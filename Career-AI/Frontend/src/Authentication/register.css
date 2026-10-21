@@ -1,0 +1,658 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f8f7fc;
+  overflow: hidden;
+}
+
+
+/* =========================
+   MAIN PAGE LAYOUT
+========================= */
+
+.login-page {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+
+  background: #f8f7fc;
+}
+
+
+/* =========================================================
+   LEFT SECTION
+========================================================= */
+
+.login-left {
+  flex: 1;
+
+  position: relative;
+  overflow: hidden;
+
+  padding: 16px 24px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(134,111,255,0.35),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(174,153,255,0.22),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      135deg,
+      #f4efff 0%,
+      #f6f2ff 45%,
+      #faf8ff 100%
+    );
+}
+
+
+/* =========================
+   GRID BACKGROUND
+========================= */
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(122,104,255,0.08) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(122,104,255,0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 52px 52px;
+}
+
+
+/* =========================
+   BLUR EFFECTS
+========================= */
+
+.blur {
+  position: absolute;
+  border-radius: 50%;
+
+  filter: blur(100px);
+}
+
+.blur-1 {
+  width: 300px;
+  height: 300px;
+
+  background: rgba(123,97,255,0.18);
+
+  top: -100px;
+  left: -100px;
+}
+
+.blur-2 {
+  width: 350px;
+  height: 350px;
+
+  background: rgba(168,149,255,0.18);
+
+  bottom: -100px;
+  right: -100px;
+}
+
+
+/* =========================================================
+   LOGO SECTION
+========================================================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.logo-icon {
+  width: 54px;
+  height: 54px;
+
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #7066ff,
+    #9f98ff
+  );
+
+  box-shadow: 0 10px 30px rgba(112,102,255,0.25);
+}
+
+.logo h2 {
+  font-size: 20px;
+  color: #17142b;
+}
+
+.logo p {
+  margin-top: 4px;
+
+  color: #706f85;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   AI BADGE
+========================================================= */
+
+.ai-badge {
+  width: fit-content;
+
+  margin-top: 18px;
+
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  position: relative;
+  z-index: 2;
+
+  background: rgba(255,255,255,0.7);
+
+  border: 1px solid rgba(255,255,255,0.8);
+
+  backdrop-filter: blur(10px);
+
+  color: #4f4b6f;
+
+  font-size: 14px;
+}
+
+.ai-badge span {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #8d7fff;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  margin-top: 24px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  max-width: 700px;
+
+  font-size: 64px;
+  font-weight: 700;
+
+  line-height: 1.08;
+  letter-spacing: -4px;
+
+  padding-bottom: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #7b6dff,
+    #a59cff
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
+
+.floating-cards {
+  margin-top: 24px;
+
+  max-width: 760px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================
+   SINGLE CARD
+========================= */
+
+.info-card {
+  padding: 24px;
+
+  border-radius: 28px;
+
+  background: rgba(255,255,255,0.72);
+
+  border: 1px solid rgba(255,255,255,0.8);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 10px 30px rgba(109,93,214,0.08);
+
+  animation: floatCard 5s ease-in-out infinite;
+}
+
+.info-card.small {
+  margin-top: 18px;
+}
+
+
+/* =========================
+   FLOAT DELAYS
+========================= */
+
+.info-card:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.info-card:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.info-card:nth-child(4) {
+  animation-delay: 3s;
+}
+
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #7a74a1;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.info-card h3 {
+  margin-top: 16px;
+
+  font-size: 40px;
+
+  color: #1c1737;
+}
+
+.info-card p {
+  margin-top: 8px;
+
+  color: #67637f;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress {
+  width: 100%;
+  height: 8px;
+
+  margin-top: 18px;
+
+  border-radius: 999px;
+
+  background: #e8e2ff;
+}
+
+.progress-fill {
+  width: 92%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: linear-gradient(
+    90deg,
+    #7b6dff,
+    #a79fff
+  );
+}
+
+
+/* =========================
+   FLOAT ANIMATION
+========================= */
+
+@keyframes floatCard {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+/* =========================================================
+   REGISTER RIGHT SECTION
+========================================================= */
+
+.register-right {
+  width: 46%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+}
+
+
+/* =========================
+   REGISTER CARD
+========================= */
+
+.register-card {
+  width: 100%;
+  max-width: 520px;
+
+  height: 720px;
+
+  background: rgba(255,255,255,0.72);
+
+  border: 1px solid rgba(255,255,255,0.9);
+
+  backdrop-filter: blur(20px);
+
+  border-radius: 30px;
+
+  padding: 34px 30px;
+
+  box-shadow: 0 20px 60px rgba(104,91,199,0.08);
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   REGISTER TOP
+========================= */
+
+.register-top {
+  margin-bottom: 24px;
+}
+
+.register-top h1 {
+  font-size: 42px;
+
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  color: #1b1734;
+}
+
+.register-top p {
+  margin-top: 8px;
+
+  font-size: 15px;
+
+  color: #746f8f;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   REGISTER FORM
+========================= */
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+/* =========================
+   INPUT GROUP
+========================= */
+
+.register-group label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #2a2445;
+}
+
+
+/* =========================
+   INPUT BOX
+========================= */
+
+.register-input {
+  height: 56px;
+
+  border-radius: 18px;
+
+  background: #f3ecff;
+
+  border: 1px solid transparent;
+
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+
+  transition: 0.3s;
+}
+
+.register-input:focus-within {
+  border-color: #8f80ff;
+
+  box-shadow: 0 0 0 4px rgba(143,128,255,0.12);
+}
+
+.register-input input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 15px;
+
+  color: #26213d;
+}
+
+
+/* =========================
+   PASSWORD STRENGTH
+========================= */
+
+.password-strength {
+  margin-top: 10px;
+}
+
+.strength-bar {
+  width: 100%;
+  height: 6px;
+
+  border-radius: 999px;
+
+  background: #e8defd;
+
+  overflow: hidden;
+}
+
+.strength-fill {
+  width: 32%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: linear-gradient(
+    90deg,
+    #6f63ff,
+    #a49cff
+  );
+}
+
+.password-strength p {
+  margin-top: 8px;
+
+  font-size: 13px;
+
+  color: #7b7498;
+}
+
+
+/* =========================
+   TERMS
+========================= */
+
+.terms {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-top: 4px;
+
+  font-size: 14px;
+
+  color: #706b8c;
+
+  line-height: 1.5;
+}
+
+.terms span {
+  color: #6f63ff;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   REGISTER BUTTON
+========================= */
+
+.register-btn {
+  width: 100%;
+  height: 58px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  margin-top: 6px;
+
+  background: linear-gradient(
+    135deg,
+    #6f63ff,
+    #a19aff
+  );
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 16px 35px rgba(111,99,255,0.25);
+}
+
+
+/* =========================
+   LOGIN LINK
+========================= */
+
+.register-bottom {
+  text-align: center;
+
+  margin-top: 22px;
+
+  font-size: 14px;
+
+  color: #7a7594;
+}
+
+.register-bottom span {
+  color: #6f63ff;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}

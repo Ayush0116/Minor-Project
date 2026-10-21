@@ -1,0 +1,1223 @@
+/* =====================================================
+   CURATOR AI - PROFILE SETUP
+===================================================== */
+
+.profile-container {
+  position: absolute;
+
+  top: 0px;
+  left: 230px;
+
+  width: calc(100vw - 230px);
+  height: calc(100vh - 40px);
+
+  box-sizing: border-box;
+
+  padding: 28px 38px 30px;
+
+  background:
+    radial-gradient(
+      circle at 85% 5%,
+      rgba(123, 104, 224, 0.045),
+      transparent 28%
+    ),
+    #fafbfe;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  font-family: "Inter", sans-serif;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.profile-header {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+
+  flex-shrink: 0;
+}
+
+.header-content {
+  max-width: 720px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 7px;
+
+  color: #7568c8;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+}
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #7565dc;
+
+  box-shadow:
+    0 0 0 3px rgba(117, 101, 220, 0.09);
+}
+
+.profile-header h1 {
+  margin: 0;
+
+  color: #211f3b;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  letter-spacing: -0.8px;
+
+  line-height: 1.15;
+}
+
+.profile-header p {
+  max-width: 650px;
+
+  margin: 7px 0 0;
+
+  color: #777587;
+
+  font-size: 12px;
+
+  line-height: 1.55;
+}
+
+
+/* =====================================================
+   PROFILE STATUS
+===================================================== */
+
+.profile-status {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 11px;
+
+  color: #676477;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  border: 1px solid #ece9f3;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.status-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 16px;
+
+  color: #5c4dba;
+
+  background: #eeeaff;
+
+  border-radius: 50%;
+
+  font-size: 9px;
+}
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+.progress-section {
+  margin-bottom: 18px;
+
+  flex-shrink: 0;
+}
+
+.progress-labels {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 8px;
+}
+
+.progress-labels > div {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.step-text {
+  color: #7568c8;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.9px;
+}
+
+.step-title {
+  color: #4d4a5d;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.progress-percent {
+  color: #777486;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 5px;
+
+  overflow: hidden;
+
+  background: #eae8f1;
+
+  border-radius: 20px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #7565dc,
+      #9b8ded
+    );
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 0 10px rgba(117, 101, 220, 0.15);
+
+  transition: width 0.6s ease;
+}
+
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 7px;
+
+  color: #aaa8b4;
+
+  font-size: 8px;
+  font-weight: 500;
+}
+
+.progress-steps .completed {
+  color: #8277c4;
+}
+
+.progress-steps .active {
+  color: #6657bd;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   FORM CARD
+===================================================== */
+
+.form-card {
+  width: 100%;
+
+  flex: 1;
+
+  min-height: 90%;
+
+  box-sizing: border-box;
+
+  padding: 25px 28px;
+
+  overflow-y: auto;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid rgba(105, 88, 190, 0.08);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 30px rgba(45, 35, 90, 0.045);
+}
+
+
+/* Scrollbar */
+
+.form-card::-webkit-scrollbar {
+  width: 5px;
+}
+
+.form-card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.form-card::-webkit-scrollbar-thumb {
+  background: #ddd9e9;
+
+  border-radius: 20px;
+}
+
+.form-card::-webkit-scrollbar-thumb:hover {
+  background: #c6bfda;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.form-section {
+  padding: 1px 0;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 18px;
+}
+
+.section-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #6b5bc5;
+
+  background: #f2efff;
+
+  border: 1px solid #e9e4fa;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+
+  box-shadow:
+    0 3px 10px rgba(96, 79, 180, 0.045);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.section-icon:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 14px rgba(96, 79, 180, 0.09);
+}
+
+.section-icon.purple {
+  color: #6654ca;
+
+  background: #f0edff;
+}
+
+.section-icon.blue {
+  color: #5979bb;
+
+  background: #eef4ff;
+
+  border-color: #e1eafc;
+}
+
+.section-heading h3 {
+  margin: 0;
+
+  color: #292640;
+
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.section-heading p {
+  margin: 3px 0 0;
+
+  color: #9794a2;
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.divider {
+  height: 1px;
+
+  margin: 23px 0;
+
+  border: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #eeeaf5 15%,
+      #eeeaf5 85%,
+      transparent
+    );
+}
+
+
+/* =====================================================
+   FORM ROW
+===================================================== */
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.form-group label {
+  color: #656275;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.form-group input,
+.select-wrapper select {
+  width: 100%;
+  height: 40px;
+
+  box-sizing: border-box;
+
+  padding: 0 12px;
+
+  color: #37334d;
+
+  background: #fbfaff;
+
+  border: 1px solid #e7e3ef;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #aaa7b5;
+}
+
+.form-group input:hover,
+.select-wrapper select:hover {
+  border-color: #dcd6e9;
+}
+
+.form-group input:focus,
+.select-wrapper select:focus {
+  background: #ffffff;
+
+  border-color: #a99ce3;
+
+  box-shadow:
+    0 0 0 3px rgba(117, 101, 220, 0.07);
+}
+
+
+/* Select */
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select {
+  appearance: none;
+
+  cursor: pointer;
+
+  padding-right: 35px;
+}
+
+.select-wrapper::after {
+  content: "⌄";
+
+  position: absolute;
+
+  right: 13px;
+  top: 50%;
+
+  color: #858193;
+
+  font-size: 13px;
+
+  pointer-events: none;
+
+  transform: translateY(-55%);
+}
+
+
+/* =====================================================
+   SKILLS HEADER
+===================================================== */
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 11px;
+}
+
+.helper-text {
+  margin: 0;
+
+  color: #8d8999;
+
+  font-size: 10px;
+}
+
+.skill-count {
+  color: #8b86a0;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.skills-container {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 11px;
+
+  color: #666375;
+
+  background: #faf9fd;
+
+  border: 1px solid #e5e1ec;
+
+  border-radius: 8px;
+
+  font-size: 10px;
+  font-weight: 550;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.skill-pill:hover {
+  color: #5c4bb9;
+
+  background: #f6f2ff;
+
+  border-color: #d9d1f1;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 3px 9px rgba(91, 74, 186, 0.06);
+}
+
+
+/* Selected */
+
+.skill-pill.selected {
+  color: #5b4ab7;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f0ecff,
+      #f7f4ff
+    );
+
+  border-color: #d8cff5;
+
+  box-shadow:
+    0 2px 7px rgba(91, 74, 186, 0.04);
+}
+
+
+/* Remove */
+
+.remove-icon {
+  width: 15px;
+  height: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #7c6dc5;
+
+  background: rgba(124, 109, 197, 0.08);
+
+  border: 0;
+
+  border-radius: 50%;
+
+  font-size: 12px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.remove-icon:hover {
+  color: #ffffff;
+
+  background: #c97991;
+
+  transform: scale(1.08);
+}
+
+
+/* =====================================================
+   ADD SKILL
+===================================================== */
+
+.add-skill-btn {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 13px;
+
+  padding: 7px 10px;
+
+  color: #6a5bbd;
+
+  background: transparent;
+
+  border: 1px dashed #cbc4e3;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.add-skill-btn:hover {
+  background: #f7f3ff;
+
+  border-color: #a99ce0;
+
+  transform: translateY(-1px);
+}
+
+.plus-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 15px;
+  height: 15px;
+
+  background: #eeeaff;
+
+  border-radius: 5px;
+
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* =====================================================
+   CAREER OBJECTIVE
+   Target Role + Preparation Timeline
+===================================================== */
+
+/* Main career objective container */
+.form-section:has(.narrative-box) {
+  padding-top: 1px;
+}
+
+
+/* =====================================================
+   TARGET ROLE / PREPARATION TIMELINE
+===================================================== */
+
+.form-section:has(.narrative-box) .form-row {
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  margin-bottom: 18px;
+}
+
+
+/* Field labels */
+.form-section:has(.narrative-box) .form-group label {
+  color: #5f5b70;
+
+  font-size: 10px;
+  font-weight: 650;
+
+  letter-spacing: 0.05px;
+}
+
+
+/* Select fields */
+.form-section:has(.narrative-box) .select-wrapper select {
+  height: 42px;
+
+  padding: 0 38px 0 13px;
+
+  color: #37334d;
+  background: #fbfaff;
+
+  border: 1px solid #e5e1ef;
+  border-radius: 10px;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  box-shadow:
+    0 2px 7px rgba(65, 52, 120, 0.025);
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* Select hover */
+.form-section:has(.narrative-box) .select-wrapper select:hover {
+  background: #ffffff;
+
+  border-color: #d8d1e8;
+
+  box-shadow:
+    0 4px 10px rgba(75, 60, 130, 0.045);
+}
+
+
+/* Select focus */
+.form-section:has(.narrative-box) .select-wrapper select:focus {
+  background: #ffffff;
+
+  border-color: #9d90d8;
+
+  box-shadow:
+    0 0 0 3px rgba(117, 101, 220, 0.075);
+}
+
+
+/* =====================================================
+   CAREER GOAL / CONTEXT BOX
+===================================================== */
+
+.form-section:has(.narrative-box) .narrative-box {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+  padding: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #faf8ff 0%,
+      #f8faff 100%
+    );
+
+  border: 1px solid #e9e5f3;
+  border-radius: 13px;
+
+  box-shadow:
+    0 3px 12px rgba(55, 43, 100, 0.025);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* Box hover */
+.form-section:has(.narrative-box) .narrative-box:hover {
+  border-color: #ddd6ee;
+
+  box-shadow:
+    0 5px 16px rgba(55, 43, 100, 0.045);
+}
+
+
+/* =====================================================
+   CAREER GOAL HEADER
+===================================================== */
+
+.form-section:has(.narrative-box) .narrative-header {
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+}
+
+
+/* Small AI icon */
+.form-section:has(.narrative-box) .narrative-icon {
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #6d5dcc;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eeeaff,
+      #f4f1ff
+    );
+
+  border: 1px solid #e5defa;
+  border-radius: 9px;
+
+  font-size: 13px;
+
+  box-shadow:
+    0 3px 8px rgba(103, 87, 190, 0.06);
+}
+
+
+/* Goal title */
+.form-section:has(.narrative-box) .narrative-header strong {
+
+  display: block;
+
+  margin: 1px 0 4px;
+
+  color: #3d3955;
+
+  font-size: 11px;
+  font-weight: 650;
+
+  line-height: 1.35;
+}
+
+
+/* Goal helper text */
+.form-section:has(.narrative-box) .narrative-header p {
+
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #8b8798;
+
+  font-size: 9px;
+
+  line-height: 1.55;
+}
+
+
+/* =====================================================
+   CAREER GOAL TEXTAREA
+===================================================== */
+
+.form-section:has(.narrative-box) .narrative-input {
+
+  width: 100%;
+  min-height: 82px;
+
+  box-sizing: border-box;
+
+  padding: 11px 13px;
+
+  color: #403c59;
+
+  background: #ffffff;
+
+  border: 1px solid #e2ddef;
+  border-radius: 9px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 10px;
+
+  line-height: 1.55;
+
+  resize: vertical;
+
+  box-shadow:
+    inset 0 1px 2px rgba(50, 40, 90, 0.018);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* Textarea hover */
+.form-section:has(.narrative-box) .narrative-input:hover {
+
+  border-color: #d6cfe6;
+
+  background: #ffffff;
+}
+
+
+/* Textarea focus */
+.form-section:has(.narrative-box) .narrative-input:focus {
+
+  background: #ffffff;
+
+  border-color: #9182d3;
+
+  box-shadow:
+    0 0 0 3px rgba(117, 101, 220, 0.075),
+    0 4px 12px rgba(70, 55, 130, 0.035);
+}
+
+
+/* Placeholder */
+.form-section:has(.narrative-box) .narrative-input::placeholder {
+
+  color: #aaa7b6;
+
+  opacity: 1;
+}
+
+
+/* =====================================================
+   CAREER OBJECTIVE RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .form-section:has(.narrative-box) .form-row {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .form-section:has(.narrative-box) .narrative-box {
+    padding: 14px;
+
+    gap: 12px;
+  }
+
+  .form-section:has(.narrative-box) .narrative-header {
+    gap: 9px;
+  }
+
+  .form-section:has(.narrative-box) .narrative-input {
+    min-height: 90px;
+  }
+
+}
+
+/* =====================================================
+   NARRATIVE BOX & INPUT
+===================================================== */
+
+.narrative-box {
+  display: flex;
+  flex-direction: column; /* Isse header upar aur input niche aayega */
+  gap: 16px; /* Header aur input ke beech ka gap */
+  
+  padding: 18px; /* Thodi zyada padding premium feel ke liye */
+  
+  background: linear-gradient(135deg, #faf8ff, #f8faff);
+  border: 1px solid #ece8f4;
+  border-radius: 12px;
+}
+
+/* Naya div jo icon aur text ko ek line me rakhega */
+.narrative-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.narrative-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  
+  color: #7564ce;
+  background: #eeeaff;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.narrative-header strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #403c59;
+  font-size: 13px; /* Pehle 11px tha, thoda bada kiya readablity ke liye */
+}
+
+.narrative-header p {
+  max-width: 650px;
+  margin: 0;
+  color: #888595;
+  font-size: 11px; /* Pehle 10px tha */
+  line-height: 1.5;
+}
+
+/* =====================================================
+   TEXTAREA STYLING
+===================================================== */
+
+.narrative-input {
+  width: 100%;
+  min-height: 90px;
+  
+  background-color: #ffffff;
+  border: 1px solid #e2dcf2; /* Box ke border se thoda dark */
+  border-radius: 8px;
+  
+  padding: 12px 14px;
+  font-size: 12px;
+  color: #403c59;
+  font-family: inherit; /* Aapke project ka main font lega */
+  
+  resize: vertical; /* User height badha sakta hai */
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.narrative-input:focus {
+  outline: none;
+  border-color: #7564ce;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(117, 100, 206, 0.1); /* Aapke icon color ka glow */
+}
+
+.narrative-input::placeholder {
+  color: #b3b0bf;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 24px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #f0edf5;
+}
+
+.save-note {
+  color: #9996a3;
+
+  font-size: 9px;
+}
+
+.continue-btn {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 9px 15px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6859ce,
+      #7b6bdd
+    );
+
+  border: 0;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 15px rgba(104, 89, 206, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.continue-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 9px 20px rgba(104, 89, 206, 0.25);
+}
+
+.continue-btn span {
+  font-size: 14px;
+
+  transition: transform 0.2s ease;
+}
+
+.continue-btn:hover span {
+  transform: translateX(3px);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .profile-container {
+    left: 230px;
+
+    width: calc(100vw - 230px);
+
+    padding: 25px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .profile-container {
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px;
+  }
+
+  .profile-status {
+    display: none;
+  }
+
+  .profile-header h1 {
+    font-size: 25px;
+  }
+
+  .progress-steps {
+    display: none;
+  }
+
+}
