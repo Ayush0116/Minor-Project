@@ -149,19 +149,15 @@ function Dashboard() {
           "";
 
         // Load the saved analysis, roadmap and role market data together.
-        const [analysisResult, roadmapResult, marketResult] =
-          await Promise.allSettled([
-            fetchJSON(`${API_BASE_URL}/career/analysis`, { token }),
-            fetchJSON(`${API_BASE_URL}/roadmap`, { token }),
-            targetRole
-              ? fetchJSON(`${AI_BASE_URL}/market-analysis`, {
-                  method: "POST",
-                  body: JSON.stringify({ targetRole }),
-                })
-              : Promise.reject(
-                  new Error("Target role is missing from your profile.")
-                ),
-          ]);
+       
+// Load the saved analysis and roadmap together.
+const [analysisResult, roadmapResult, marketResult] =
+  await Promise.allSettled([
+    fetchJSON(`${API_BASE_URL}/career/analysis`, { token }),
+    fetchJSON(`${API_BASE_URL}/roadmap`, { token }),
+    Promise.resolve(null),
+  ]);
+
 
         if (cancelled) return;
 
