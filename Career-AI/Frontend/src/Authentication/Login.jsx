@@ -123,12 +123,12 @@ const Login = () => {
       // Navigate only after receiving and saving the JWT.
       navigate("/dashboard", { replace: true });
     } catch (err) {
-      console.error("Login request failed:", err);
+  console.error("Login request failed:", err);
 
-      setError(
-        "Unable to connect to the backend. Make sure your Express server is running on port 5000."
-      );
-    } finally {
+  setError(
+    `Backend connection failed. API URL: ${API_URL || "MISSING"}. Please check the deployed backend and network connection.`
+  );
+} finally {
       setLoading(false);
     }
   };
