@@ -158,7 +158,7 @@ const AI_BASE_URL =
     setActionResult(null);
 
     try {
-      const response = await fetch(`${API_BASE_URL}/${endpoint}`, {
+const response = await fetch(`${AI_BASE_URL}/${endpoint}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
