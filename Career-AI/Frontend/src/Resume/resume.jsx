@@ -121,10 +121,10 @@ const AI_BASE_URL =
       formData.append("file", selectedFile);
       formData.append("targetRole", role.trim());
 
-      const response = await fetch(`${API_BASE_URL}/analyze`, {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(`${AI_BASE_URL}/api/ai/resume/analyze`, {
+  method: "POST",
+  body: formData,
+});
 
       const data = await response.json();
 
